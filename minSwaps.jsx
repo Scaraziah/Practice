@@ -1,20 +1,15 @@
-"use strict";
+// Minimum number of swaps required to sort an array
+// Given an array of n distinct elements, find the minimum number of swaps required to sort the array.
 
-// for(let i = 0; i < 100; i++){
-//         var printNumbers = i + 1; 
-//     if(printNumbers % 3 == 0 && printNumbers % 5 == 0){
-//          console.log("fizzbuzz");
-//     }
-//     else if(printNumbers % 3 == 0){
-//         console.log("fizz");
-//     }
-//     else if(printNumbers % 5 == 0){
-//         console.log("buzz");
-//     }
-//     else{
-//         console.log(printNumbers);
-//     }
-// }
+// Examples: 
+
+// Input: {4, 3, 2, 1}
+// Output: 2
+// Explanation: Swap index 0 with 3 and 1 with 2 to 
+//               form the sorted array {1, 2, 3, 4}.
+
+// Input: {1, 5, 4, 3, 2}
+// Output: 2
 
 let a = [1, 3, 5, 6, 4, 2]
 function minSwaps(arr) {
@@ -51,4 +46,4 @@ function minSwaps(arr) {
         return ans;
 }
 
-console.log(minSwaps[a])
+console.log(minSwaps(a))

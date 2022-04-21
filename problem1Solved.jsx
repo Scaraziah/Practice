@@ -25,3 +25,5 @@ function boundRatio(numbers, left, right) {
     return b;
 }
 console.log(boundRatio(numbers, left, right));
+
+
