@@ -51,4 +51,4 @@ function minSwaps(arr) {
         return ans;
 }
 
-console.log(minSwaps[a])
+console.log(minSwaps(a))
