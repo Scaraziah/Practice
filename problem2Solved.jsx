@@ -26,35 +26,26 @@
 
 let a = [1, 3, 5, 6, 4, 2]
 function newArray(arr) {
-    let arrpos = [];
-    for ( let i = 0; i < n; i++)
-        arrpos.push([arr[i], i]);
-        arrpos.sort(function(a,b){
-            return a[0]-b[0];
-        }); 
-    
-        let vis = new Array(n);
-        for(let i = 0; i < n; i++)
-            {
-                vis[i] = false
-            }
-            let ans = 0
-        
-        for (let i = 0; i< n; i++){
-            if (vis[i] || arrpos[i][1] == i)
-            continue;
-            let cycle_size = 0;
-            let j = i;
-            while (!vis[j])
-            {
-                vis[j]=true;
-                j= arrpos [j][1];
-                cycle_size++
-            }
-            if(cycle_size > 0){
-                ans += (cycle_size -1);
-            }
+    let b = [];
+    let y = arr.length;
+    // while ( b.length != arr.length){
+    //     let i = arr[x]
+    //     let c = arr[y]
+    //     if(i != y){
+    //         b.push(i);
+    //         b.push(c);   
+    //     }    
+    // }
+    // return b;
+    for(i = 0; i < y-i; i++){
+        let el = arr[i];
+        for (c = y; c >= i; c--){
+            let la = arr[c];
+            b.push(arr[el-1]),
+            b.push(arr[la-1]);
         }
-        return ans;
+        return b
+    }
 }
 
+console.log(newArray(a));
