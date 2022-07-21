@@ -32,49 +32,24 @@ promptColor(ogArray)
 // 3. Write a function that has one parameter: an array
 //     a. The array that is passed in needs to be an array of numbers
 //     b. Find the most frequent value in the array and return that value
-// function frequentNumbers(numberList){
-//     let count = 0
-//     let counter = 1
-//     let mostUsed
-//     for(let i = 0; i<numberList.length; i++){
-//         for(let j=i; j<numberList.length; j++){
-//             if(numberList[i] == numberList[j])
-//             count++;
-//                 if(counter<count)
-//                     counter < count;
-//                     counter = count
-//                     mostUsed = numberList[i];
-//         }
-//         console.log(`${mostUsed} (${counter})`);
-//     } 
-//     count = 0
-// }
 
-// let arrayList = [3, 2, 3, 3, 2, 4, 9, 3]
-// frequentNumbers(arrayList)
+let arr = [100,100,200,200,200,300,300,300,400,400,400,400];
+let counts = {}, max = 0, res;
+    for (var v in arr) {
+      counts[arr[v]] = (counts[arr[v]] || 0) + 1;
+      if (counts[arr[v]] > max) { 
+        max = counts[arr[v]];
+        res = arr[v];
+      }
 
+    }
+let results = [];
+    for (var k in counts){
+      if (counts[k] == max){
+        console.log(k + " occurs " + counts[k] + " times");
+        results.push(k);
+      }
+    }
+    console.log(results);
 
 
-let rLongNum = "aaabbbbbccccaacccbbbaaabbbaaa";
-for(let i = 0; i < rLongNum.length; i++){
-    let j = rLongNum.charAt(i);
-    let k = j.concat(k);
-    console.log(k);
-}
-
-// const arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
-// let mf = 1;
-// let m = 0;
-// let item;
-// for (let i=0; i<arr1.length; i++){
-//         for (let j=i; j<arr1.length; j++){
-//                 if (arr1[i] == arr1[j])
-//                  m++;
-//                 if (mf<m){
-//                   mf=m; 
-//                   item = arr1[i];
-//                 }
-//         }
-//         m=0;
-// }
-// console.log(`${item} ( ${mf} times ) `) ;
