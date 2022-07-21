@@ -32,27 +32,35 @@ promptColor(ogArray)
 // 3. Write a function that has one parameter: an array
 //     a. The array that is passed in needs to be an array of numbers
 //     b. Find the most frequent value in the array and return that value
-function frequentNumbers(numberList){
-    let count = 0
-    let counter = 1
-    let mostUsed
-    for(let i = 0; i<numberList.length; i++){
-        for(let j=i; j<numberList.length; j++){
-            if(numberList[i] == numberList[j])
-            count++;
-                if(counter<count)
-                    counter < count;
-                    counter = count
-                    mostUsed = numberList[i];
-        }
-        console.log(`${mostUsed} (${counter})`);
-    } 
-    count = 0
+// function frequentNumbers(numberList){
+//     let count = 0
+//     let counter = 1
+//     let mostUsed
+//     for(let i = 0; i<numberList.length; i++){
+//         for(let j=i; j<numberList.length; j++){
+//             if(numberList[i] == numberList[j])
+//             count++;
+//                 if(counter<count)
+//                     counter < count;
+//                     counter = count
+//                     mostUsed = numberList[i];
+//         }
+//         console.log(`${mostUsed} (${counter})`);
+//     } 
+//     count = 0
+// }
+
+// let arrayList = [3, 2, 3, 3, 2, 4, 9, 3]
+// frequentNumbers(arrayList)
+
+
+
+let rLongNum = "aaabbbbbccccaacccbbbaaabbbaaa";
+for(let i = 0; i < rLongNum.length; i++){
+    let j = rLongNum.charAt(i);
+    let k = j.concat(k);
+    console.log(k);
 }
-
-let arrayList = [3, 2, 3, 3, 2, 4, 9, 3]
-frequentNumbers(arrayList)
-
 
 // const arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 // let mf = 1;
