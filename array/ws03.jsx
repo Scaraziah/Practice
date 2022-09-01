@@ -80,3 +80,21 @@ freqNumber(arr1)
 
 const arr2=[3, 10, 10, 10, 2, 3, 10, 3, 10, 2, 4, 9, 3, 1];
 addNumb(arr2)
+
+// 5. Write a function that has two parameters: an array, a number
+//   a. The array that is passed in needs to be an array of numbers
+//   b. Iterate over the array and print to the console each value in the array that is greater than the number parameter
+
+function higherNumb(arr3, myNumb){
+  for(let i =0; i < arr3.length; i++){
+    let testNumb = arr3[i];
+    if(testNumb > myNumb){
+    console.log(testNumb);
+    }
+  }
+}
+
+const arr3 = [3, 10, 10, 10, 2, 3, 10, 3, 10, 2, 4, 9, 3, 1];
+let myNumb = 2;
+
+higherNumb(arr3, myNumb);
