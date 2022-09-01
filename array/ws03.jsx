@@ -54,3 +54,29 @@ console.log(`${item} ( ${mf} times ) `) ;
 
 const arr1=[3, 10, 10, 10, 2, 3, 10, 3, 10, 2, 4, 9, 3];
 freqNumber(arr1)
+
+
+// 4.	Write a function that has one parameter: an array
+  // a.	The array that is passed in needs to be an array of numbers
+  // b.	Iterate over the array and add up all of the numbers inside of it
+  // c.	If the sum of the numbers is even, return string “Even” from the function
+  // d.	If the sum of the numbers is odd, return string “Odd” from the function
+
+  function addNumb(){
+    let addedNumb = 0;
+    let oddNumb = "Odd";
+    let evenNumb = "Even";
+    for (let i = 0; i<arr2.length; i++){
+      let numbToAdd = arr2[i]
+      addedNumb = addedNumb + numbToAdd;
+    }
+    if(addedNumb % 2 == 0){
+      console.log(addedNumb +" is " + evenNumb)
+    }
+    else{
+    console.log(addedNumb +" is " + oddNumb)
+    }
+  }
+
+const arr2=[3, 10, 10, 10, 2, 3, 10, 3, 10, 2, 4, 9, 3, 1];
+addNumb(arr2)
