@@ -124,3 +124,23 @@ function advNumb(){
 
 const arr4 = [3, 10, 10, 10, 2, 3, 10, 3, 10, 2, 4, 9, 3, 1];
 advNumb(arr4);
+
+
+// 7. Write a function that has two parameters: an array, a number
+//   a. Return the value in the array at the index represented by the number parameter
+//   b. If there is no value at the specified index, print to the console “No value here!”
+
+function chooseNumb(){
+  let chosenNumb = prompt("Enter Number")
+  for(let i=0; i < arr5.length; i++){
+    if(chosenNumb == arr5[i]){
+      console.log("The number chosen matches " + chosenNumb + " at index " + i)
+    }else if (chosenNumb == ""){
+      console.log("No value here!");
+    }else{
+    }
+  }
+}
+
+const arr5 = [3, 10, 2, 4, 9, 1];
+chooseNumb(arr5);
