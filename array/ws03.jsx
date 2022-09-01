@@ -98,3 +98,29 @@ const arr3 = [3, 10, 10, 10, 2, 3, 10, 3, 10, 2, 4, 9, 3, 1];
 let myNumb = 2;
 
 higherNumb(arr3, myNumb);
+
+// 6. Write a function that has one parameter: an array
+//   a. The array that is passed in needs to be an array of numbers
+//   b. Compute the average of the numbers inside the array
+//   c. Any numbers in the array that are less than the computed average will be pushed into a separate array. That array will then be returned from the function.
+
+function advNumb(){
+  let adverage = 0;
+  for(let i = 0; i < arr4.length; i++){
+    let currentNumb = arr4[i];
+    adverage += currentNumb;
+  }
+  adverage = adverage / arr4.length;
+  console.log("The adverage is " + adverage);
+  let m = [];
+  for(let j = 0; j < arr4.length; j++){
+    let newNumb = arr4[j]
+    if(newNumb <= adverage){
+      m.push(newNumb);
+    }
+  }
+  console.log("These numbers are below adverage " + m);
+}
+
+const arr4 = [3, 10, 10, 10, 2, 3, 10, 3, 10, 2, 4, 9, 3, 1];
+advNumb(arr4);
