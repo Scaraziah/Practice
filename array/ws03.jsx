@@ -39,10 +39,10 @@ let mf = 1;
 let m = 0;
 let item;
 for (let i=0; i<arr1.length; i++){
-        for (let j=i; j<arr1.length; j++)        {
+        for (let j=i; j<arr1.length; j++){
                 if (arr1[i] == arr1[j])
                  m++;
-                if (mf<m)                {
+                if (mf<m){
                   mf=m; 
                   item = arr1[i];
                 }
@@ -144,3 +144,32 @@ function chooseNumb(){
 
 const arr5 = [3, 10, 2, 4, 9, 1];
 chooseNumb(arr5);
+
+// 8.Write a function that has two parameters: an array, an array
+//   a. Both arrays that are passed in should contain the first names of people
+//   b. Iterate over the arrays comparing the values at each index from one array to the other. If there is a matching name in both arrays, return that name from the function
+//   c. For example: [“Nevin”, “David”, “Mike”] and [“Brett”, “Mike”, “Charles]
+//   “Mike” would be returned from the function because it is a match in both arrays
+
+function freqName(){
+  let mf = "";
+  let m = "";
+  let myNames;
+  for (let i=0; i<arrName1.length; i++){
+    for(let j = 0; j<arrName2.length; j++){
+      if (arrName1[i] == arrName2[j])
+        m = arrName1[i];
+      if (mf<m){                
+        mf=m; 
+        myNames = arrName1[i];
+      }
+  }
+  m="";
+}
+  console.log(myNames) ;
+  }
+
+let arrName1 = ["Billy", "Joey", "Nancy"]
+let arrName2 = ["Misty", "Nancy", "Brad"]
+
+freqName(arrName1, arrName2);
