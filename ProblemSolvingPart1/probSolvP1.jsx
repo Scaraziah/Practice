@@ -5,9 +5,10 @@
 //     b. i.e. “Hello” will be returned as “olleH”
 
 function revString(){
-    for(let i= revArr.length; i >= 0; i--){
+    for(let i= revArr.length -1 ; i >= 0; i--){
         let newArr = revArr.charAt(i);
-        console.log(newArr);
+        let myWord = newArr;
+        console.log(myWord);
     }
 }
 let revArr = prompt("Enter word in reverse.")
