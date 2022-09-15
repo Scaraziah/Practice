@@ -11,8 +11,9 @@
 //         console.log(myWord);
 //     }
 // }
-let revArr = prompt("Enter word in reverse.")
 // revString(revArr)
+
+let revArr = prompt("Enter word in reverse.")
 
 let joinArray;
 function reverseString(str) {
@@ -60,6 +61,23 @@ function compNumb(str){
 }
 
 compNumb(rLongNum)
-// let chartNumb = compressNumb.join();
-// console.log("Compressed Word ", chartNumb)
 
+
+// 4.BONUS CHALLENGE: Palindrome
+//     a. A word, phrase, or sequence that reads the same backward as forward i.e. madam
+//     b. Write code that takes a user input and checks to see if it is a Palindrome and reports the result
+
+let palArr = prompt("Enter word to check for Palindrome.")
+
+let palJoinArray;
+function palReverseString(str) {
+    var splitString = str.split(""); 
+    var reverseArray = splitString.reverse(); 
+    var palJoinArray = reverseArray.join("");
+    if(palArr == palJoinArray){
+        console.log(palArr + " is a Palindrome!")
+    }else{
+        console.log(palArr + " isn't a Palidrome!")
+    }
+}
+palReverseString(palArr)
