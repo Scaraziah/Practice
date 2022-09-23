@@ -30,30 +30,18 @@ console.log(isHappy(numb))
 //     a. A prime number is a number that is only divisible by one and itself.
 //     b. Write a method that prints out all prime numbers between 1 and 100 
 
-function isPrime( n)
-{
-      // since 0 and 1 is not prime return false.
+function isPrime( n){
       if(n == 1 || n == 0) return false;
-    
-      // Run a loop from 2 to n-1
       for(var i = 2; i < n; i++)
       {
-        
-        // if the number is divisible by i, then n is not a prime number.
         if(n % i == 0) return false;
       }
-      // otherwise, n is prime number.
       return true;
 }
-  
-  
-// Driver code
+
 var N = 100;
-  
-// check for every number from 1 to N
-  for(var i = 1; i <= N; i++)
-  {
-      // check if current number is prime
+
+  for(var i = 1; i <= N; i++){
       if(isPrime(i)) {
         console.log( i );
       }
@@ -72,3 +60,4 @@ console.log(isPrime(N));
 //     a. A series of numbers in which each number (Fibonacci number) is the sum of the two preceding numbers. The simplest is the series 1, 1, 2, 3, 5, 8, etc.
 //     b. Write a method that does the Fibonacci sequence starting at 1
 //     c. HARDER VERSION: Write a method that does the Fibonacci sequence starting at a number that a user inputs
+
