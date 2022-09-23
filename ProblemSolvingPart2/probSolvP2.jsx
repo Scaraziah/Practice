@@ -2,13 +2,29 @@
 
 // 1. Happy Numbers
 //     a.https://en.wikipedia.org/wiki/Happy_number
-//     b. A happy number is a number defined by the following process: starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1. An example of a happy number is 19
+//     b. A happy number is a number defined by the following process: starting with any positive integer, replace the number by the sum of the squares of its digits, 
+        // and repeat the process until the number equals 1. An example of a happy number is 19
 //     c. Write a method that determines if a number is happy or sad
+let numb = prompt("Enter Number");
+function isHappy(n){
+        let map ={};
+        while (n !== 1){
+                let current = n;
+                let sum = 0;
+                while (current !== 0){
+                        sum += ( current % 10)**2;
+                        current = Math.floor(current/10);
+                }
+                if (map[sum]){
+                        return false
+                }
+                map[sum] = true
+                n = sum;
+        }
+        return true
+};
 
-
-
-
-
+console.log(isHappy(numb))
 
 
 
