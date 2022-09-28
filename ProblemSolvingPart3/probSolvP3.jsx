@@ -9,21 +9,20 @@
 let firstNumb = 0;
 let secondNub = 0;
 function givenTarget(n,m){
-        for(let i = 0; i <= n.length; i++)
+        for(let i = 0; i <= n.length; i++){
                 for(let x = 0; x <= n.length; x++){
                         if(n[i] + n[x] === m){
                                 // console.log( n[i], n[x]);
                                 firstNumb = n[i];
-                                secondNub = n[x];
-                                
-                        }
+                                secondNub = n[x];                               
+                        };
                 };
-                console.log(firstNumb, secondNub)
         };
-
+        console.log(firstNumb, secondNub)
+};
 let arrOfNumb = [5, 17, 77, 50];
 let targNumb = 55;
-givenTarget(arrOfNumb, targNumb)
+givenTarget(arrOfNumb, targNumb);
 
 
 
