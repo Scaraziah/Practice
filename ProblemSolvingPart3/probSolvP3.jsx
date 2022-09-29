@@ -24,22 +24,29 @@ let arrOfNumb = [5, 17, 77, 50];
 let targNumb = 55;
 givenTarget(arrOfNumb, targNumb);
 
-
-
-
-
-
-
-
-
-
-
-
 // 2. Palindrome is a word, phrase, or sequence that reads the same backward as forward i.e. madam. Write code that takes a user input and checks to see 
 // if it is a Palindrome and reports the result. You must handle spaces. 
 
+let revArr = prompt("Enter word in reverse.")
+let joinArray = reverseString(revArr);
+function reverseString(str) {
+        let splitString = str.split(""); 
+        let reverseArray = splitString.reverse(); 
+        let joinArray = reverseArray.join("");
+        return joinArray; 
+}
 
+reverseString(revArr);
 
+let myWord = revArr
+function palidromeWord(n,m){
+        if( n === m){
+                return true
+        }else{
+                return false
+        }
+};
+console.log(palidromeWord(myWord, joinArray));
 
 
 
