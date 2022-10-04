@@ -36,8 +36,6 @@ function reverseString(str) {
         return joinArray; 
 }
 
-reverseString(revArr);
-
 let myWord = revArr
 function palidromeWord(n,m){
         if( n === m){
@@ -50,21 +48,26 @@ console.log(palidromeWord(myWord, joinArray));
 
 
 
-
-
-
-
-
-
-
 // 3. Given a list of integers, return a bool that represents whether or not all integers in the list can form a sequence of incrementing integers
 //         Use case: 
 //                 i. {5, 7, 3, 8, 6} 🡪 false (no 4 to complete the sequence)
 //                 ii. {17, 15, 20, 19, 21, 16, 18} 🡪 true
 
-
-
-
+let arrNumb = [17, 15, 20, 19, 21, 16, 18];
+arrNumb.sort(function(a , b){
+        return a - b;
+});
+function seqInt(str){
+        for(let i = 0; i <= str.length; i++){
+                if(str[i] + 1 === str[i+1]){
+                        return true;
+                }else{
+                        return false;
+                }
+        };
+};
+let bolSeqInt = seqInt(arrNumb)
+console.log(bolSeqInt);
 
 
 // 4.Create a method that takes an array of positive and negative numbers. Return an array where the first element is the count of the positive numbers and the second element is the sum of negative numbers. 
