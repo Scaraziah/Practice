@@ -73,30 +73,42 @@ console.log(bolSeqInt);
 // 4.Create a method that takes an array of positive and negative numbers. Return an array where the first element is the count of the positive numbers and the second element is the sum of negative numbers. 
 //         a. Use case: [7, 9, -3, -32, 107, -1, 36, 95, -14, -99, 21]
 
-let n = 0
-let x = 0
-let myStr = [7, 9, -3, -32, 107, -1, 36, 95, -14, -99, 21, -10];
-let myNumbX = addPosNegNumb(myStr);
+let n = 0;
+let x = 0;
+let myStr = [7, 9, -3, -32, 107, -1, 36, 95, -14, -99, 21];
 function addPosNegNumb(str){
         for(let i = 0; i <= str.length; i++){
                 if(str[i] >= 0){
                         n = str[i] + n; 
-                }else{ 
-                        x = str[i] + x;
-                
+                }else if(str[i] < 0){
+                        x = str[i] - x;
                 }
-                console.log(n, x)
         }
+        console.log(n, x)
 }
-console.log(myNumbX);
+addPosNegNumb(myStr);
 
 
 
 
 // 5. Create a method that accepts a string of space separated numbers and returns the highest and lowest number as a string
 //         a. Use case: “3 9 0 1 4 8 10 2” 🡪 “0 10”
+let highNumb = null;
+let lowNumb = null;
 
+function numbRang(str){
+        for(let i = 0; i<= str.length; i++){
+                if(str[i] >= highNumb){
+                        highNumb = str[i]
+                }else if(str[i] <= lowNumb){
+                        lowNumb = str[i]
+                        }
+                }
+                console.log(lowNumb, highNumb)
+}
 
+let myRang = [3, 9, 0, 1, 4, 8, 10, 2];
+numbRang(myRang);
 
 
 
