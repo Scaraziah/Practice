@@ -132,9 +132,27 @@ console.log(testing);
 //                 i. “abc” 🡪 “1 2 3”
 //                 ii. “coding is fun” 🡪 “3 15 4 9 14 7 9 19 6 21 14”
 
+function alfPosition(str){
+        let alphabet = "abcdefghijklmnopqrstuvwxyz";
+        let alfNumb = [];
 
+        str = str.toLowerCase();
 
+        for(let i = 0; i < str.length; i++){
+                let idx = alphabet.indexOf(str[i]);
 
+                if(idx === -1){
+                        continue;
+                }else{
+                        alfNumb.push(idx + 1);
+                }
+        }
+        return alfNumb.join(" ")
+};
+
+let myStrAlf = prompt("Word for Alphabet position.");
+let myWordCode = alfPosition(myStrAlf);
+console.log(myWordCode);
 
 
 
