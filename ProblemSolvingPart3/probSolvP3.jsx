@@ -113,21 +113,17 @@ numbRang(myRang);
 //                 i. “mike1@gmail.com” 🡪 true
 //                 ii. “gmail.com” 🡪 false
 
-function tOrFEmail(email){
+function TOrFEmail(email){
         let myTest = /\S+@\S+\.\S+/;
-        if(email == myTest){
+        if(email.match(myTest)){
                 return true;
         }else{
                 return false;
         }
 };
 let myEmail = prompt("Enter email address!");
-let testing = tOrFEmail(myEmail);
+let testing = TOrFEmail(myEmail);
 console.log(testing);
-
-
-
-
 
 
 
