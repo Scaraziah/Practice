@@ -154,16 +154,33 @@ let myStrAlf = prompt("Word for Alphabet position.");
 let myWordCode = alfPosition(myStrAlf);
 console.log(myWordCode);
 
-
-
-
-
 // 8. A briefcase has a four-digit rolling-lock. Each digit is a number from 0-9 that can be rolled either forwards or backwards. 
 // Write a method that returns the smallest number of turns it takes to transform the lock from current combination to the target combination. 
 // One turn is equivalent to rolling a number forwards or backwards by one. 
 //         a. Use case: 
 //                 i. Current lock: 3893
 //                 ii. Target lock: 5296
+
+
+function rotations(curNumb, expNumb){
+        let flipCount = 0;
+        for(let i = 0; i < 4; i++){
+                let j = curNumb.charAt[i];
+                while(j != expNumb.charAt(j)){
+                j++        
+                flipCount++;
+                }if(j > 9){
+                        j = 0;
+                }
+                return flipCount
+        }
+}
+
+let currentNumb = "3893";
+let targetNumb = "5296";
+let counts = rotations(currentNumb, targetNumb);
+console.log(counts);
+
 // 9. Happy Numbers
 //         a. A happy number is a number defined by the following process: starting with any positive integer, replace the number by the sum 
 //         of the squares of its digits, and repeat the process until the number equals 1. An example of a happy number is 19
