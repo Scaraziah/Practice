@@ -164,9 +164,19 @@ console.log(myWordCode);
 
 function rotations(curNumb, expNumb){
         let flipCount = 0;
+        let j = curNumb.charAt(0);
+        let k = curNumb.charAt(1);
+        let l = curNumb.charAt(2);
+        let m = curNumb.charAt(3);
+        let jj = expNumb.charAt(0);
+        let kk = expNumb.charAt(1);
+        let ll = expNumb.charAt(2);
+        let mm = expNumb.charAt(3);
         for(let i = 0; i < 4; i++){
-                let j = curNumb.charAt[i];
-                while(j != expNumb.charAt(j)){
+                if(j < k){
+
+                }
+                while(j != k){
                 j++        
                 flipCount++;
                 }if(j > 9){
@@ -176,13 +186,37 @@ function rotations(curNumb, expNumb){
         }
 }
 
-let currentNumb = "3893";
-let targetNumb = "5296";
+let currentNumb = 3893;
+let targetNumb = 5296;
 let counts = rotations(currentNumb, targetNumb);
 console.log(counts);
 
 // 9. Happy Numbers
 //         a. A happy number is a number defined by the following process: starting with any positive integer, replace the number by the sum 
 //         of the squares of its digits, and repeat the process until the number equals 1. An example of a happy number is 19
+
+let numb = prompt("Is your number happy?");
+function isHappy(n){
+        let map ={};
+        while (n !== 1){
+                let current = n;
+                let sum = 0;
+                while (current !== 0){
+                        sum += ( current % 10)**2;
+                        current = Math.floor(current/10);
+                }
+                if (map[sum]){
+                        return false
+                }
+                map[sum] = true
+                n = sum;
+        }
+        return true
+};
+
+console.log(isHappy(numb))
+
+
+
 // 10. Given a number, return the reciprocal of the reverse of the original number, as a double. 
 //         a. Use case: If given 17, return 0.01408 (1/71)
