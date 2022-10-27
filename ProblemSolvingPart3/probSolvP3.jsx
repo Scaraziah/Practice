@@ -162,34 +162,34 @@ console.log(myWordCode);
 //                 ii. Target lock: 5296
 
 
-function rotations(curNumb, expNumb){
-        let flipCount = 0;
-        let j = curNumb.charAt(0);
-        let k = curNumb.charAt(1);
-        let l = curNumb.charAt(2);
-        let m = curNumb.charAt(3);
-        let jj = expNumb.charAt(0);
-        let kk = expNumb.charAt(1);
-        let ll = expNumb.charAt(2);
-        let mm = expNumb.charAt(3);
-        for(let i = 0; i < 4; i++){
-                if(j < k){
+// function rotations(curNumb, expNumb){
+//         let flipCount = 0;
+//         let j = curNumb.charAt(0);
+//         let k = curNumb.charAt(1);
+//         let l = curNumb.charAt(2);
+//         let m = curNumb.charAt(3);
+//         let jj = expNumb.charAt(0);
+//         let kk = expNumb.charAt(1);
+//         let ll = expNumb.charAt(2);
+//         let mm = expNumb.charAt(3);
+//         for(let i = 0; i < 4; i++){
+//                 if(j < k){
 
-                }
-                while(j != k){
-                j++        
-                flipCount++;
-                }if(j > 9){
-                        j = 0;
-                }
-                return flipCount
-        }
-}
+//                 }
+//                 while(j != k){
+//                 j++        
+//                 flipCount++;
+//                 }if(j > 9){
+//                         j = 0;
+//                 }
+//                 return flipCount
+//         }
+// }
 
-let currentNumb = 3893;
-let targetNumb = 5296;
-let counts = rotations(currentNumb, targetNumb);
-console.log(counts);
+// let currentNumb = 3893;
+// let targetNumb = 5296;
+// let counts = rotations(currentNumb, targetNumb);
+// console.log(counts);
 
 // 9. Happy Numbers
 //         a. A happy number is a number defined by the following process: starting with any positive integer, replace the number by the sum 
@@ -220,3 +220,12 @@ console.log(isHappy(numb))
 
 // 10. Given a number, return the reciprocal of the reverse of the original number, as a double. 
 //         a. Use case: If given 17, return 0.01408 (1/71)
+
+let revNumb;
+function reverseString(str) {
+    var splitString = str.split(""); 
+    var reverseArray = splitString.reverse(); 
+    var revNumb = reverseArray.join();
+    return revNumb; 
+}
+console.log(reverseString("45"));
