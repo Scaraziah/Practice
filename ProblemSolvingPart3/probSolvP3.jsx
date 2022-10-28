@@ -224,8 +224,9 @@ console.log(isHappy(numb))
 let revNumb;
 function reverseString(str) {
     var splitString = str.split(""); 
-    var reverseArray = splitString.reverse(); 
-    var revNumb = reverseArray.join();
-    return revNumb; 
+    var reverseArray = splitString.reverse(""); 
+    var revNumb = reverseArray.join("");
+    let reverseNumb = parseInt(revNumb)
+    return reverseNumb; 
 }
 console.log(reverseString("45"));
