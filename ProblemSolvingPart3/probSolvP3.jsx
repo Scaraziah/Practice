@@ -229,4 +229,15 @@ function reverseString(str) {
     let reverseNumb = parseInt(revNumb)
     return reverseNumb; 
 }
-console.log(reverseString("45"));
+let recipNumb = 1/reverseString(prompt("Reciprocal"));
+console.log(recipNumb);
+
+
+
+
+
+
+
+
+
+
