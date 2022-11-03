@@ -9,7 +9,7 @@
 // this will be a good habit that you will develop and carry forward with you for all problems you encounter at devCodeCamp and beyond.
 
 // 1. Write a method that prints the next 20 leap years.
-
+// 2024 is the next leap year
 
 // 2. Write a method that finds the longest palindromic substring of a given string.
 
