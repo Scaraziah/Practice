@@ -98,6 +98,8 @@ const expand = (str, left, right) => {
     return r-l-1;
 }
 console.log(longestPalindrome(prompt("Longest Palindrome is")));
+
+
 // 3. Write a method to convert a given number to hours and minutes.
 
 
