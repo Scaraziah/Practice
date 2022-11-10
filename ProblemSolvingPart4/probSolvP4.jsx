@@ -111,8 +111,13 @@ console.log(time_convert(prompt("Number")));
 
 
 // 4. Write a method to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference
-
-
+function difNumFun(n){
+    if(n <= 13)
+        return 13 - n;
+    else 
+        return (n - 13) * 2;
+}
+console.log(difNumFun(prompt("Difference between 13."))); 
 
 // 5. Write a method to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.
 
