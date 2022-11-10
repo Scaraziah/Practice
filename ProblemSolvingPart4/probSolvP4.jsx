@@ -101,7 +101,13 @@ console.log(longestPalindrome(prompt("Longest Palindrome is")));
 
 
 // 3. Write a method to convert a given number to hours and minutes.
+function time_convert(num) { 
+  var hours = Math.floor(num / 60);  
+  var minutes = num % 60;
+  return hours + " hours & " + minutes;         
+}
 
+console.log(time_convert(prompt("Number")));
 
 
 // 4. Write a method to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference
